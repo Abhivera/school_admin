@@ -195,11 +195,8 @@ export default function App() {
 
         <Routes>
           {getRoutes(routes)}
-          {token ? (
-            <Route path="*" element={<Navigate to="/dashboards/analytics" />} />
-          ) : (
-            <Route path="*" element={<Navigate to="/authentication/sign-in/cover" />} />
-          )}
+
+          <Route path="*" element={<Navigate to="/dashboards/analytics" />} />
         </Routes>
       </ThemeProvider>
     </CacheProvider>
@@ -223,11 +220,8 @@ export default function App() {
       {layout === "vr" && <Configurator />}
       <Routes>
         {getRoutes(routes)}
-        {token ? (
-          <Route path="*" element={<Navigate to="/dashboards/analytics" />} />
-        ) : (
-          <Route path="*" element={<Navigate to="/authentication/sign-in/cover" />} />
-        )}
+
+        <Route path="*" element={<Navigate to="/dashboards/analytics" />} />
       </Routes>
     </ThemeProvider>
   );

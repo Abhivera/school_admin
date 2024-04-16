@@ -21,6 +21,7 @@ import Department from "layouts/pages/department";
 import SubSubject from "layouts/pages/sub-subject";
 import PortraitIcon from "@mui/icons-material/Portrait";
 import BadgeIcon from "@mui/icons-material/Badge";
+import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
 import EmpGrade from "layouts/pages/emp_grade";
 import AcademicGrade from "layouts/pages/academic_grade";
@@ -261,6 +262,24 @@ const routes = [
         key: "department",
         route: "pages/employee/department",
         component: <Department />,
+      },
+    ],
+  },
+  {
+    type: "collapse",
+    name: "Fee",
+    key: "fee",
+    icon: (
+      <Icon fontSize="medium">
+        <CurrencyRupeeIcon />
+      </Icon>
+    ),
+    collapse: [
+      {
+        name: "Fee Category",
+        key: "feecategory",
+        route: "pages/fee/feecategory",
+        component: <EmployeeInfo />,
       },
     ],
   },
