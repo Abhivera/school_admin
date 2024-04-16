@@ -108,7 +108,7 @@ function SchoolShowPage() {
           const sendData = {
             ...values,
           };
-          const response = await axios.post("http://10.0.20.128:8000/mg_school", sendData, {
+          const response = await axios.put("http://10.0.20.128:8000/mg_school", sendData, {
             headers: {
               "Content-Type": "multipart/form-data",
               Authorization: `Bearer ${token}`,
@@ -160,7 +160,7 @@ function SchoolShowPage() {
                     </MDTypography>
                   </Grid>
 
-                  <Grid item sm={3} xs={12} mt={2}>
+                  <Grid item sm={6} xs={12} mt={2}>
                     <MDTypography variant="body2"> School Logo .:</MDTypography>
                   </Grid>
                   <Grid item sm={6} xs={12} mt={2}>
@@ -169,13 +169,13 @@ function SchoolShowPage() {
                       accept="image/*"
                       name="logo"
                       onChange={handleImage}
-                      sx={{ width: "84%" }}
+                      sx={{ width: "80%" }}
                       variant="standard"
                       InputLabelProps={{ shrink: true }}
                     />
                   </Grid>
 
-                  <Grid item sm={3} xs={12}>
+                  <Grid item sm={6} xs={12}>
                     <MDInput
                       required
                       autoComplete="off"
@@ -184,11 +184,11 @@ function SchoolShowPage() {
                       label="Mobile Number"
                       value={values.mobile_number}
                       onChange={handleChange}
-                      sx={{ width: "70%" }}
+                      sx={{ width: "80%" }}
                       mb={10}
                     />
                   </Grid>
-                  <Grid item sm={3} xs={12}>
+                  <Grid item sm={6} xs={12}>
                     <MDInput
                       required
                       autoComplete="off"
@@ -197,38 +197,12 @@ function SchoolShowPage() {
                       label="Email Id"
                       value={values.email_id}
                       onChange={handleChange}
-                      sx={{ width: "70%" }}
-                      mb={10}
-                    />
-                  </Grid>
-                  <Grid item sm={3} xs={12}>
-                    <MDInput
-                      required
-                      autoComplete="off"
-                      variant="standard"
-                      name="fax_number"
-                      label="Fax Number"
-                      value={values.fax_number}
-                      onChange={handleChange}
-                      sx={{ width: "70%" }}
-                      mb={10}
-                    />
-                  </Grid>
-                  <Grid item sm={3} xs={12}>
-                    <MDInput
-                      required
-                      autoComplete="off"
-                      variant="standard"
-                      name="grading_system"
-                      label="Grading System"
-                      value={values.grading_system}
-                      onChange={handleChange}
-                      sx={{ width: "70%" }}
+                      sx={{ width: "80%" }}
                       mb={10}
                     />
                   </Grid>
 
-                  <Grid item sm={3} xs={12}>
+                  <Grid item sm={6} xs={12}>
                     <MDInput
                       placeholder="eg. 9:00 AM"
                       autoComplete="off"
@@ -237,11 +211,11 @@ function SchoolShowPage() {
                       label="Start Time"
                       value={values.start_time}
                       onChange={handleChange}
-                      sx={{ width: "70%" }}
+                      sx={{ width: "80%" }}
                       mb={10}
                     />
                   </Grid>
-                  <Grid item sm={3} xs={12}>
+                  <Grid item sm={6} xs={12}>
                     <MDInput
                       placeholder="eg. 5:00 PM"
                       autoComplete="off"
@@ -250,7 +224,7 @@ function SchoolShowPage() {
                       label="End Time"
                       value={values.end_time}
                       onChange={handleChange}
-                      sx={{ width: "70%" }}
+                      sx={{ width: "80%" }}
                       mb={10}
                     />
                   </Grid>
